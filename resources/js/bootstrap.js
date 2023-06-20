@@ -9,6 +9,19 @@ import 'bootstrap';
 import axios from 'axios';
 window.axios = axios;
 
+import Map from 'ol/Map.js';
+import OSM from 'ol/source/OSM.js';
+import TileLayer from 'ol/layer/Tile.js';
+import TileWMS from 'ol/source/TileWMS.js';
+import View from 'ol/View.js';
+
+window.TileLayer = TileLayer;
+window.TileWMS = TileWMS;
+window.View = View;
+window.Map = Map;
+window.OSM = OSM;
+
+
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
